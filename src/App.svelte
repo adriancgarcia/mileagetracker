@@ -29,7 +29,7 @@ onMount (() => {getTrips()})
     <img src="/img/vecteezy_vector-speedometer-icon_.jpg" alt="odometer">
 </h1>
   <h1>Trips Made</h1>
-  <Display />
+  <Display trips={trips}/>
   {#if showForm}
   <Form />
   {/if}
