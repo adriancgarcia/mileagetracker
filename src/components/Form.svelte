@@ -4,9 +4,10 @@
     export let startmileage
     export let endmileage
     export let costpermile
-    export let _id
+    export let id
     export let action 
     export let create 
+    export let update
 
     function calculate() {
       let startmileage = parseFloat(document.getElementById('startmileage').value);
@@ -23,10 +24,23 @@
     const handleSubmit = (event) => {
         event.preventDefault()
         if(action === "create"){
-            create({tripname, tripdate, startmileage, endmileage, costpermile})
+            create({
+                tripname, 
+                tripdate, 
+                startmileage, 
+                endmileage, 
+                costpermile
+            })
         }
         if(action === "update"){
-
+            update({
+                id, 
+                tripname, 
+                tripdate, 
+                startmileage, 
+                endmileage, 
+                costpermile
+            })
         }
     }
     

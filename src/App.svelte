@@ -14,9 +14,10 @@
   let startmileage = ""
   let endmileage = ""
   let costpermile = ""
-  let _id = ""
+  let id = ""
   let trips = []
   let action = "create"
+
 
   // functions
   const getTrips = async () => {
@@ -36,7 +37,7 @@
     startmileage = ""
     endmileage = ""
     costpermile = ""
-    _id = ""
+    id = ""
     action = "create"
     getTrips()
   }
@@ -44,6 +45,29 @@
   const createTrips = async (trip) => {
     await fetch(url, {
       method: "post",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(trip)
+    })
+
+    resetState() 
+  }
+
+  const selectTripUpdate = (trip) => {
+    tripname = trip.tripname
+    tripdate = trip.tripdate
+    startmileage = trip.startmileage
+    endmileage = trip.endmileage
+    costpermile = trip.costpermile
+    id = trip.id
+    action = "update"
+    showForm = true
+  }
+
+  const updateTrips = async (trip) => {
+    await fetch(url + `/${trip.id}`, {
+      method: "put",
       headers: {
         "Content-Type":"application/json"
       },
@@ -63,7 +87,7 @@ onMount (() => {getTrips()})
 </h1>
   <h1>Trips Made</h1>
   <button on:click={toggleForm}>Create a new Trip</button>
-  <Display trips={trips}/>
+  <Display trips={trips} select={selectTripUpdate} />
   {#if showForm}
   <Form 
     tripname = {tripname}
@@ -71,9 +95,10 @@ onMount (() => {getTrips()})
     startmileage = {startmileage}
     endmileage = {endmileage}
     costpermile = {costpermile}
-    _id = {_id}
+    id = {id}
     action = {action}
     create = {createTrips}
+    update = {updateTrips}
   />
   {/if}
 </main>
