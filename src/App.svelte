@@ -77,6 +77,13 @@
     resetState() 
   }
 
+  const deleteTrips = async (trip) => {
+    await fetch(url + `/${trip.id}`, {
+      method: "delete",
+    })
+    resetState() 
+  }
+
 // Lifecycle
 onMount (() => {getTrips()})
 </script>
@@ -87,7 +94,11 @@ onMount (() => {getTrips()})
 </h1>
   <h1>Trips Made</h1>
   <button on:click={toggleForm}>Create a new Trip</button>
-  <Display trips={trips} select={selectTripUpdate} />
+  <Display 
+  trips={trips} 
+  select={selectTripUpdate} 
+  destroy={deleteTrips}
+  />
   {#if showForm}
   <Form 
     tripname = {tripname}
@@ -99,6 +110,7 @@ onMount (() => {getTrips()})
     action = {action}
     create = {createTrips}
     update = {updateTrips}
+
   />
   {/if}
 </main>

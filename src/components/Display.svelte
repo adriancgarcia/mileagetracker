@@ -1,6 +1,7 @@
 <script>
     export let trips;
     export let select;
+    export let destroy;
 
     
 </script>
@@ -15,6 +16,7 @@
             <h3>{trip.startmileage}</h3>
             <h3>{trip.endmileage}</h3>
             <h3>{trip.costpermile}</h3>
+            <button on:click={() => destroy(trip)}>Delete</button>
         </li>
         {/each}
     </ul>
