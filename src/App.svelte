@@ -4,8 +4,9 @@
   import { onMount} from "svelte"
   import Display from './components/Display.svelte'
   import Form from './components/Form.svelte'
+  // import Calculate from './components/Calculate.svelte'
 
-  const url="https://mileagetrackerbackend-ag.onrender.com/trips";
+  const url="https://mileagetrackerbackend-ag.onrender.com/trips"
 
   // state 
   let showForm = false
@@ -14,6 +15,7 @@
   let startmileage = ""
   let endmileage = ""
   let costpermile = ""
+  let reimbursement = ""
   let id = ""
   let trips = []
   let action = "create"
@@ -37,6 +39,7 @@
     startmileage = ""
     endmileage = ""
     costpermile = ""
+    reimbursement = ""
     id = ""
     action = "create"
     getTrips()
@@ -54,12 +57,26 @@
     resetState() 
   }
 
+  // function calculate() {
+  //     let startmileage = parseFloat(document.getElementById('startmileage').value);
+  //     let endmileage = parseFloat(document.getElementById('endmileage').value);
+  //     let costpermile = parseFloat(document.getElementById('costpermile').value);
+      
+  //     let distance = endmileage - startmileage;
+  //     let mileage = distance * costpermile;
+  
+  //     let outputDiv = document.getElementById('outputDiv').innerHTML = mileage;
+  //     // console.log(mileage)
+  //   }
+  //   calculate()
+
   const selectTripUpdate = (trip) => {
     tripname = trip.tripname
     tripdate = trip.tripdate
     startmileage = trip.startmileage
     endmileage = trip.endmileage
     costpermile = trip.costpermile
+    reimbursement = trip.reimbursement
     id = trip.id
     action = "update"
     showForm = true
@@ -106,13 +123,15 @@ onMount (() => {getTrips()})
     startmileage = {startmileage}
     endmileage = {endmileage}
     costpermile = {costpermile}
+    reimbursement = {reimbursement}
     id = {id}
     action = {action}
     create = {createTrips}
     update = {updateTrips}
-
   />
   {/if}
+
+  <!-- <Calculate  /> -->
 </main>
 
 <style>
