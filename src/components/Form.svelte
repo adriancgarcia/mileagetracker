@@ -9,19 +9,6 @@
     export let action 
     export let create 
     export let update
-    // export let calculate
-
-    // function calculate() {
-    //   let startmileage = parseFloat(document.getElementById('startmileage').value);
-    //   let endmileage = parseFloat(document.getElementById('endmileage').value);
-    //   let costpermile = parseFloat(document.getElementById('costpermile').value);
-      
-    //   let distance = endmileage - startmileage;
-    //   let mileage = distance * costpermile;
-  
-    //   document.getElementById('outputDiv').innerHTML = mileage;
-    
-    // }
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -48,11 +35,6 @@
         }
     }
 
-    // let startmileage = 0;
-    // let endmileage = 0;
-    // let costpermile = 0;
-    // let mileage = 0;
-
     function calculate() {
     const distance = endmileage - startmileage;
     reimbursement = distance * costpermile;
@@ -65,7 +47,7 @@
 <div>
 <form on:submit={handleSubmit}>
     <div class="formTitle">
-        <h2>My Trips</h2>
+        <h2>Trip Info</h2>
       </div>
     <label for="tripname">Trip Name</label>
     <input type=text bind:value={tripname}>
@@ -75,57 +57,80 @@
     <input type=number bind:value={startmileage}>
     <label for="endmileage">Trip End</label>
     <input type=number bind:value={endmileage}>
-    <label for="costPerMile">Cost Per Mile</label>
+    <label for="costpermile">Cost Per Mile</label>
     <input type=number step=any bind:value={costpermile}> 
-    <div>
-        <button on:click={calculate}>Calculate</button>
-    </div>
-    
-    <div id="outputDiv">
-    <p>Mileage: {reimbursement}</p>
-    </div>
-    <input type=submit>
+    <button class="calculate" on:click={calculate}>Calculate</button>
+    <br/>
+    <br/>
+        <div id="outputDiv">
+            <label for="reimbursement">Mileage Refund</label>
+            <input type=number step=any bind:value={reimbursement}>
+        </div>
+
+    <input type=submit id="submit">
 </form>
     
 </div>
 
 <style>
     .formTitle {
-      padding: 0;
-      margin: 0
+        padding: 0;
+        margin: 0
     }
     form{
-          width: 350px;
-          margin: 0 auto;
-          padding:  0 50px 0 30px;
-          text-align: center;
-          border: 3px solid black;
-          border-radius: 6px;
-      }
-  
-      
-      input{
-          width: 100%;
-          border-radius: 6px;
-          text-align: left;
-          padding: 10px;
-      }
-      label{
-          margin: 10px auto;
-          text-align: left;
-      }
-      #outputDiv {
-      width: 40%;
-      height: 10px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 5px 0 20px 0;
-      font-size: 16px;
-      color: black;
+        width: 350px;
+        margin: 0 auto;
+        padding:  20px;
+        text-align: center;
+        border: 3px solid white;
+        border-radius: 6px;
+        background-color: black;
+        opacity: 0.7;
+    }
+
+    
+    input{
+        width: 80%;
+        border-radius: 6px;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        color: black;
+        font-size:1em;
+    }
+    label{
+        margin: 10px;
+        text-align: left;
+        color: white;
+        padding: 10px 0 15px 0;
+    }
+
+    #outputDiv {
+    width: 40%;
+    height: 10px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    font-size: 16px;
+    color: black;
+    border: 1px solid black;
+    }
+
+    button{
+      margin-top: 20px;
       border: 1px solid black;
     }
-    button{
-      margin: 20px;
-      border: 1px solid black;
+
+    #submit {
+        margin-top: 90px;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    h3 {
+        background-color: white;
+        color: black;
     }
   </style>

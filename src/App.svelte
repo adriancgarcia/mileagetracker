@@ -4,9 +4,11 @@
   import { onMount} from "svelte"
   import Display from './components/Display.svelte'
   import Form from './components/Form.svelte'
+  import Header from './components/Header.svelte'
   // import Calculate from './components/Calculate.svelte'
 
   const url="https://mileagetrackerbackend-ag.onrender.com/trips"
+  
 
   // state 
   let showForm = false
@@ -57,19 +59,6 @@
     resetState() 
   }
 
-  // function calculate() {
-  //     let startmileage = parseFloat(document.getElementById('startmileage').value);
-  //     let endmileage = parseFloat(document.getElementById('endmileage').value);
-  //     let costpermile = parseFloat(document.getElementById('costpermile').value);
-      
-  //     let distance = endmileage - startmileage;
-  //     let mileage = distance * costpermile;
-  
-  //     let outputDiv = document.getElementById('outputDiv').innerHTML = mileage;
-  //     // console.log(mileage)
-  //   }
-  //   calculate()
-
   const selectTripUpdate = (trip) => {
     tripname = trip.tripname
     tripdate = trip.tripdate
@@ -105,12 +94,11 @@
 onMount (() => {getTrips()})
 </script>
 
+<Header />
+
 <main>
-  <h1>
-    <img src="/img/vecteezy_vector-speedometer-icon_.jpg" alt="odometer">
-</h1>
+  <button class="createButton" on:click={toggleForm}>Create a new Trip</button>
   <h1>Trips Made</h1>
-  <button on:click={toggleForm}>Create a new Trip</button>
   <Display 
   trips={trips} 
   select={selectTripUpdate} 
@@ -135,7 +123,17 @@ onMount (() => {getTrips()})
 </main>
 
 <style>
-  img {
-        max-width: 300px;
-    }
+  main{
+    max-width: 960px;
+    margin: 40px auto;
+  }
+
+  .createButton {
+    padding: 10px;
+  }
+
+   h1 {
+    color: white;
+   }
+    
 </style>
