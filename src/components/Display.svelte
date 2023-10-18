@@ -37,10 +37,10 @@
         padding:0;
     }
 
-    .show ul{
+    /* .show ul{
         margin: 0 auto;
-        /* padding-bottom: 20px; */
-    }
+        padding-bottom: 20px;
+    } */
 
     .show li {
         list-style-type: none;
