@@ -8,7 +8,7 @@
 </script>
 
 
-<div>
+<div class="tripList">
     <ul class="show">
         {#each trips as trip}
             <li>
@@ -26,6 +26,16 @@
 </div>
 
 <style>
+    .tripList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: green;
+    }
+
     .show {
         padding-bottom: 60px;
     }
@@ -42,33 +52,39 @@
         background: black;
         opacity: .7;
         border: 3px solid white;
-        width: 350px;
+        width: 300px;
         padding: 0;
         margin: 0;
         display: grid;
         gap: 1em;
         grid-template-columns: repeat(auto-fill, minmax(200px, 100%), 1fr);
     }
+
     h3{ 
         color: white;
         margin: 0;
         padding: 0 30px;
     }
-    .show:hover{
+    /* .show:hover{
         cursor:pointer;
-    }
+    } */
     .editButton {
         width: 50%;
         align-items: center;
         text-align: center;
         margin: 0 auto;
     }
+
     .deleteButton {
         width: 50%;
         /* margin: 20px; */
         align-items: center;
         text-align: center;
         margin: 0 auto;
+    }
+
+    button:hover {
+        cursor: pointer;
     }
 
 

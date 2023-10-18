@@ -5,10 +5,11 @@
   import Display from './components/Display.svelte'
   import Form from './components/Form.svelte'
   import Header from './components/Header.svelte'
+  import Footer from './components/Footer.svelte'
   // import Calculate from './components/Calculate.svelte'
 
   const url="https://mileagetrackerbackend-ag.onrender.com/trips"
-  
+
 
   // state 
   let showForm = false
@@ -97,6 +98,8 @@ onMount (() => {getTrips()})
 <Header />
 
 <main>
+
+  
   <button class="createButton" on:click={toggleForm}>Create a new Trip</button>
   <h1>Trips Made</h1>
   <Display 
@@ -119,9 +122,9 @@ onMount (() => {getTrips()})
   />
   {/if}
 
-  <!-- <Calculate  /> -->
+ 
 </main>
-
+ <Footer />
 <style>
   main{
     max-width: 960px;

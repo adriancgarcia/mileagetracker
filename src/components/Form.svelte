@@ -45,31 +45,29 @@
 
 
 <div>
-<form on:submit={handleSubmit}>
-    <div class="formTitle">
-        <h2>Trip Info</h2>
-      </div>
-    <label for="tripname">Trip Name</label>
-    <input type=text bind:value={tripname}>
-    <label for="tripdate">Date of Trip</label>
-    <input type=date bind:value={tripdate}>
-    <label for="startmileage">Trip Beginning</label>
-    <input type=number bind:value={startmileage}>
-    <label for="endmileage">Trip End</label>
-    <input type=number bind:value={endmileage}>
-    <label for="costpermile">Cost Per Mile</label>
-    <input type=number step=any bind:value={costpermile}> 
-    <button class="calculate" on:click={calculate}>Calculate</button>
-    <br/>
-    <br/>
+    <form on:submit={handleSubmit}>
+        <div class="formTitle">
+            <h2>Trip Info</h2>
+        </div>
+        <label for="tripname">Trip Name</label>
+        <input type=text bind:value={tripname}>
+        <label for="tripdate">Date of Trip</label>
+        <input type=date bind:value={tripdate}>
+        <label for="startmileage">Trip Beginning</label>
+        <input type=number bind:value={startmileage}>
+        <label for="endmileage">Trip End</label>
+        <input type=number bind:value={endmileage}>
+        <label for="costpermile">Cost Per Mile</label>
+        <input type=number step=any bind:value={costpermile}> 
+        <div class="calculate" on:click={calculate}>Calculate</div>
+        <br/>
         <div id="outputDiv">
-            <label for="reimbursement">Mileage Refund</label>
+            <label for="reimbursement">Refund Amount</label>
             <input type=number step=any bind:value={reimbursement}>
         </div>
 
-    <input type=submit id="submit">
-</form>
-    
+        <input type="submit" id="submit">
+    </form>
 </div>
 
 <style>
@@ -78,7 +76,7 @@
         margin: 0
     }
     form{
-        width: 350px;
+        width: 300px;
         margin: 0 auto;
         padding:  20px;
         text-align: center;
@@ -106,7 +104,7 @@
     }
 
     #outputDiv {
-    width: 40%;
+    width: 100%;
     height: 10px;
     margin: 0 auto;
     text-align: center;
@@ -116,21 +114,36 @@
     border: 1px solid black;
     }
 
-    button{
+    /* button{
       margin-top: 20px;
       border: 1px solid black;
+    } */
+
+    .calculate {
+        background-color: white;
+        color: black;
+        border-radius: 6px;
+        height: 35px;
+        width: 75%;
+        padding-top: 10px;
+        text-align: center;
+        margin: 25px 0 0 38px;     
+    }
+
+    .calculate:hover {
+        cursor: pointer;
     }
 
     #submit {
+        margin: 0;
         margin-top: 90px;
+    }
+
+    #submit:hover {
+        cursor: pointer;
     }
 
     h2 {
         color: white;
-    }
-
-    h3 {
-        background-color: white;
-        color: black;
     }
   </style>
