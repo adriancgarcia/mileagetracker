@@ -12,15 +12,15 @@
 //       // console.log(mileage)
 //     }
     // calculate()
-let startmileage = 0;
-let endmileage = 0;
-let costpermile = 0;
-let reimbursement = 0;
+// let startmileage = 0;
+// let endmileage = 0;
+// let costpermile = 0;
+// let reimbursement = 0;
 
-function calculate() {
-const distance = endmileage - startmileage;
-reimbursement = distance * costpermile;
-}
+// function calculate() {
+// const distance = endmileage - startmileage;
+// reimbursement = distance * costpermile;
+// }
 
 
 </script>
@@ -34,7 +34,7 @@ reimbursement = distance * costpermile;
         <h3>Amount Reimbursed</h3><div id="outputDiv"></div>
     </div> -->
 
-<div>
+<!-- <div>
     <label for="startmileage">Start Mileage:</label>
     <input type="number" id="startmileage" bind:value={startmileage} />
     
@@ -45,8 +45,8 @@ reimbursement = distance * costpermile;
     <input type="number" id="costpermile" bind:value={costpermile} />
     
     <button on:click={calculate}>Calculate</button>
-    </div>
+</div>
     
     <div id="outputDiv">
-    <p>Mileage: {reimbursement}</p>
-    </div>
+        <p>Mileage: {reimbursement}</p>
+    </div> -->

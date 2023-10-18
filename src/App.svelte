@@ -6,10 +6,8 @@
   import Form from './components/Form.svelte'
   import Header from './components/Header.svelte'
   import Footer from './components/Footer.svelte'
-  // import Calculate from './components/Calculate.svelte'
 
   const url="https://mileagetrackerbackend-ag.onrender.com/trips"
-
 
   // state 
   let showForm = false
@@ -22,7 +20,6 @@
   let id = ""
   let trips = []
   let action = "create"
-
 
   // functions
   const getTrips = async () => {
@@ -98,8 +95,6 @@ onMount (() => {getTrips()})
 <Header />
 
 <main>
-
-  
   <button class="createButton" on:click={toggleForm}>Create a new Trip</button>
   <h1>Trips Made</h1>
   <Display 
@@ -121,10 +116,10 @@ onMount (() => {getTrips()})
     update = {updateTrips}
   />
   {/if}
-
- 
 </main>
+
  <Footer />
+
 <style>
   main{
     max-width: 960px;
@@ -137,6 +132,6 @@ onMount (() => {getTrips()})
 
    h1 {
     color: white;
+    text-shadow:2px 2px #000;
    }
-    
 </style>

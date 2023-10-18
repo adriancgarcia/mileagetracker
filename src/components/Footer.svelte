@@ -7,8 +7,9 @@
 <style>
     #footer {
         text-align: center;
-        background-color: black;
-        opacity: 0.7;
+        /* background-color: black; */
+        background-color: rgba(0, 0, 0, .8);
+        /* opacity: 0.7; */
         width: 100%;
         border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
@@ -28,5 +29,4 @@
     p {
         font-size: 1.2em;
     }
-
 </style>

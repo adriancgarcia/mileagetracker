@@ -39,10 +39,7 @@
     const distance = endmileage - startmileage;
     reimbursement = distance * costpermile;
     }
-
-    
 </script>
-
 
 <div>
     <form on:submit={handleSubmit}>
@@ -59,7 +56,7 @@
         <input type=number bind:value={endmileage}>
         <label for="costpermile">Cost Per Mile</label>
         <input type=number step=any bind:value={costpermile}> 
-        <div class="calculate" on:click={calculate}>Calculate</div>
+        <div id="calculate" on:click={calculate}>Calculate</div>
         <br/>
         <div id="outputDiv">
             <label for="reimbursement">Refund Amount</label>
@@ -75,19 +72,18 @@
         padding: 0;
         margin: 0
     }
-    form{
+
+    form {
         width: 300px;
         margin: 0 auto;
         padding:  20px;
         text-align: center;
         border: 3px solid white;
         border-radius: 6px;
-        background-color: black;
-        opacity: 0.7;
+        background-color: rgba(0, 0, 0, .8);
     }
 
-    
-    input{
+    input {
         width: 80%;
         border-radius: 6px;
         text-align: center;
@@ -96,7 +92,8 @@
         color: black;
         font-size:1em;
     }
-    label{
+
+    label {
         margin: 10px;
         text-align: left;
         color: white;
@@ -104,39 +101,61 @@
     }
 
     #outputDiv {
-    width: 100%;
-    height: 10px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 5px 0 5px 0;
-    font-size: 16px;
-    color: black;
-    border: 1px solid black;
+        margin-top: 15px;
     }
 
-    /* button{
-      margin-top: 20px;
-      border: 1px solid black;
-    } */
-
-    .calculate {
-        background-color: white;
-        color: black;
+    #calculate {
         border-radius: 6px;
         height: 35px;
         width: 75%;
-        padding-top: 10px;
+        padding-top: 5px;
         text-align: center;
-        margin: 25px 0 0 38px;     
+        margin: 25px 0 10px 0;  
+        display:inline-block;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        text-transform:uppercase;
+        font-weight:400;
+        color:#FFFFFF;
+        background-color:#3369ff;
+        box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+}
+    #calculate:active {
+            top:0.1em;
+    }
+    @media all and (max-width:30em) {
+        #calculate{
+            display:block;
+            margin:0.4em auto;
+            }
     }
 
-    .calculate:hover {
+    #calculate:hover {
         cursor: pointer;
     }
 
     #submit {
         margin: 0;
-        margin-top: 90px;
+        margin-top: 40px;
+        display:inline-block;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        text-transform:uppercase;
+        font-weight:400;
+        color:#FFFFFF;
+        background-color:#3369ff;
+        box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+}
+    #submit:active{
+            top:0.1em;
+    }
+    @media all and (max-width:30em){
+        #submit{
+            display:block;
+            margin:0.4em auto;
+            }
     }
 
     #submit:hover {

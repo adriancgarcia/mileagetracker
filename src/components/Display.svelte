@@ -2,9 +2,6 @@
     export let trips;
     export let select;
     export let destroy;
-    // export let calculate;
-
-    
 </script>
 
 
@@ -26,66 +23,100 @@
 </div>
 
 <style>
-    .tripList {
+    .tripList ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-around;
+        /* margin: 0 10px 0 10px; */
+    }
+
+    .show {
+        padding:0;
+    }
+
+    .show ul{
+        margin: 0 auto;
+        /* padding-bottom: 20px; */
+    }
+
+    .show li {
+        list-style-type: none;
+        padding: 20px;  
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         align-content: center;
-        background-color: green;
     }
 
-    .show {
-        padding-bottom: 60px;
-    }
-    ul{
-        margin: 0 auto;
-        padding: 0;
-    }
-    .show li {
-        list-style-type: none;
-        padding: 20px;
-        
-    }
     li {
-        background: black;
-        opacity: .7;
+        background-color: rgba(0, 0, 0, .8);
         border: 3px solid white;
         width: 300px;
         padding: 0;
-        margin: 0;
-        display: grid;
+        padding-bottom: 20px;
+        margin: 20px;
+        /* display: grid;
         gap: 1em;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 100%), 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 100%), 1fr); */
     }
 
-    h3{ 
+    h3 { 
         color: white;
         margin: 0;
         padding: 0 30px;
     }
-    /* .show:hover{
-        cursor:pointer;
-    } */
+
     .editButton {
-        width: 50%;
+        width: 40%;
         align-items: center;
         text-align: center;
         margin: 0 auto;
+        margin-top: 20px;
     }
 
     .deleteButton {
-        width: 50%;
+        width: 40%;
         /* margin: 20px; */
         align-items: center;
         text-align: center;
         margin: 0 auto;
+        margin-top: 20px;
     }
 
+    button {
+        display:inline-block;
+        padding:0.7em 1.4em;
+        margin:0 0.3em 0.3em 0;
+        border-radius:6px;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        text-transform:uppercase;
+        font-weight:400;
+        color:#FFFFFF;
+        background-color:#3369ff;
+        box-shadow:inset 0 -0.6em 0 -0.35em hsla(0, 0%, 0%, 0.17);
+        text-align:center;
+        position:relative;
+    }
+    
+    button:active {
+        top: 0.1em;
+    }
+    
+    @media all and (max-width:30em) {
+        button{
+            display:block;
+            margin:0.4em auto;
+        }
+    }
+    
     button:hover {
         cursor: pointer;
     }
-
-
 </style>

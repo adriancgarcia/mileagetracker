@@ -19,9 +19,9 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-a:hover {
+/* a:hover {
   color: #535bf2;
-}
+} */
 
 body {
   margin: 0;
@@ -36,10 +36,8 @@ body {
   /* background-image: url("https://i.imgur.com/bsCPi0f.jpeg"); */
   background-image: url("https://i.imgur.com/QYlVVF0.jpeg");
   background-repeat: no-repeat;
-  /* height: 100%; */
   background-position: center;
   background-size: cover;
-
 }
 
 h1 {
@@ -50,7 +48,7 @@ h1 {
 .card {
   padding: 2em;
 }
-.header{ 
+.header { 
   background: #ffff;
   padding: 0px;
   width: 100%;
@@ -58,7 +56,6 @@ h1 {
 }
 
 #app {
-  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 0px;
   text-align: center;
@@ -66,43 +63,29 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid black;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-/* button:hover {
-  border-color: #646cff;
-} */
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  display:inline-block;
+  padding:0.7em 1.4em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:6px;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  text-transform:uppercase;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#3369ff;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
 }
 
-/* #footer {
-  text-align: center;
-  background-color: black;
-  opacity: 0.7;
-  width: 100%;
-  margin: 0 auto;
-  border-top: 1px solid #ddd;
-  height: 300px;
-} */
+button:active {
+  top: 0.1em;
+}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@media all and (max-width:30em) {
+  button{
+      display:block;
+      margin:0.4em auto;
   }
 }
