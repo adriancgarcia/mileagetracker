@@ -122,7 +122,7 @@ onMount (() => {getTrips()})
 
 <style>
   main{
-    max-width: 960px;
+    /* max-width: 960px; */
     margin: 40px auto;
   }
 
