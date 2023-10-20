@@ -99,7 +99,7 @@
         border-radius: 6px;
         text-align: center;
         margin: 10px;
-        padding: 10px 30px 10px 30px;
+        padding: 10px;
         color: black;
         font-size:1em;
         background-color: white;
