@@ -180,7 +180,7 @@
 
     @media screen and (max-width: 600px) { 
     #tripdate {
-        width: 80%;
+        width: 200%;
         border-radius: 6px;
         text-align: center;
         margin: 10px;
