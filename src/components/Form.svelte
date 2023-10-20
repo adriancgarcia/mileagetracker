@@ -48,8 +48,8 @@
         </div>
         <label for="tripname">Trip Name</label>
         <input type=text bind:value={tripname}>
-        <label for="tripdate" id="tripdate">Date of Trip</label>
-        <input type=date bind:value={tripdate}>
+        <label for="tripdate">Date of Trip</label>
+        <input type=date id="tripdate" bind:value={tripdate}>
         <label for="startmileage">Trip Beginning</label>
         <input type=number bind:value={startmileage}>
         <label for="endmileage">Trip End</label>
