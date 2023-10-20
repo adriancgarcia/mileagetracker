@@ -50,7 +50,7 @@
         <input type=text bind:value={tripname}>
         <label for="tripdate">Date of Trip</label>
         <input type=date id="tripdate" bind:value={tripdate}>
-        <label for="startmileage">Trip Beginning</label>
+        <label for="startmileage">Trip Start</label>
         <input type=number bind:value={startmileage}>
         <label for="endmileage">Trip End</label>
         <input type=number bind:value={endmileage}>
