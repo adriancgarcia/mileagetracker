@@ -91,6 +91,7 @@
         padding: 10px;
         color: black;
         font-size:1em;
+        background-color: white;
     }
 
     label {
