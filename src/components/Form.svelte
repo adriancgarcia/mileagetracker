@@ -187,7 +187,7 @@
         padding: 10px 20px 10px 20px;
         color: black;
         font-size:1em;
-        background-color: white;
+        background-color: blue;
     }
 }
   </style>
