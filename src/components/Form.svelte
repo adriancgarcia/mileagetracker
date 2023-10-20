@@ -103,6 +103,7 @@
         color: black;
         font-size:1em;
         background-color: white;
+
     }
 
     label {
@@ -183,11 +184,11 @@
         width: 200%;
         border-radius: 6px;
         text-align: center;
-        margin: 10px 30px 10px 30px;
-        padding: 10px 20px 10px 20px;
+        margin: 10px 30px 10px 10px;
+        padding: 10px;
         color: black;
         font-size:1em;
-        background-color: blue;
+        background-color: white;
     }
 }
   </style>
