@@ -177,4 +177,17 @@
     h2 {
         color: white;
     }
+
+    @media screen and (max-width: 600px) { 
+    #tripdate {
+        width: 80%;
+        border-radius: 6px;
+        text-align: center;
+        margin: 10px;
+        padding: 10px 20px 10px 20px;
+        color: black;
+        font-size:1em;
+        background-color: white;
+    }
+}
   </style>
