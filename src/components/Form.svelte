@@ -183,7 +183,7 @@
         width: 200%;
         border-radius: 6px;
         text-align: center;
-        margin: 10px;
+        margin: 10px 30px 10px 30px;
         padding: 10px 20px 10px 20px;
         color: black;
         font-size:1em;
